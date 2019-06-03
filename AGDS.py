@@ -10,7 +10,6 @@ class AGDS(object):
         self.petal_width = {}
         self.species = {}
         self.flowers = {}
-        self.weights = {}
 
     def add_params(self):
         self.sepal_length = countNumberFrequency(sorted([flower[0] for flower in list(self.flowers.values())]))
@@ -57,10 +56,7 @@ class AGDS(object):
                     petal_width_weight, 
                     species_weight]
         
-        weights = np.around(weights, decimals=3)
-
-        self.weights[flower1] = weights
-        self.weights[flower2] = weights
+        return np.around(weights, decimals=3)
 
 
 
